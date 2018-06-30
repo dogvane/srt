@@ -81,6 +81,17 @@ namespace Dogvane.Srt
             File.WriteAllText(fileName, writer.ToString(), Encoding.Default);
         }
 
+        public static void SaveBattute(string fileName, List<Battuta> battuts)
+        {
+            StringBuilder writer = new StringBuilder();
+            foreach (var item in battuts)
+            {
+                writer.AppendLine(item.GetData());
+            }
+
+            File.WriteAllText(fileName, writer.ToString(), Encoding.Default);
+        }
+
         public Battuta GetBattuta(int id)
         {
             foreach (var battuta in battute)

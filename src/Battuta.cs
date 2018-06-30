@@ -10,7 +10,7 @@ namespace Dogvane.Srt
         /// <summary>
         /// Id
         /// </summary>
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// start time, format HH:mm:ss,fff
@@ -55,7 +55,7 @@ namespace Dogvane.Srt
         /// <summary>
         /// Text
         /// </summary>
-        public string Text { get; private set; }
+        public string Text { get; set; }
 
         public Battuta(int id, string from, string to, string text)
         {
@@ -77,7 +77,6 @@ namespace Dogvane.Srt
             sb.AppendLine(Id.ToString());
             sb.AppendFormat("{0} --> {1}", From, To).AppendLine();
             sb.AppendLine(Text);
-            sb.AppendLine();
 
             return sb.ToString();
         }
